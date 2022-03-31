@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'boman-cli -a run'
+                sh ''' docker ps
+                boman-cli -a run'''
             }
         }
     }
