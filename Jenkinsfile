@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'docker build -t dockerdndocker .'
+                sh ''' whoami
+                docker build -t dockerdndocker .'''
             }
         }
         stage('run') {
