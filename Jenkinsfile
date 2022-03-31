@@ -10,7 +10,8 @@ pipeline {
         // }
         stage('run') {
             steps {
-                sh ''' python3 -m pip install boman-cli
+                sh ''' apk add --no-cache python3 py3-pip 
+                python3 -m pip install boman-cli
                 boman-cli -a run'''
             }
         }
