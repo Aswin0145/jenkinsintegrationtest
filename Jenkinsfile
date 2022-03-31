@@ -9,7 +9,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                sh ''' docker run -v /var/run/docker.sock:/var/run/docker.sock -it dockerdndocker
+                sh ''' docker run -v /var/run/docker.sock:/var/run/docker.sock -i dockerdndocker
                 docker ps
                 boman-cli -a run'''
             }
