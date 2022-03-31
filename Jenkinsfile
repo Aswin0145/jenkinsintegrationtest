@@ -3,7 +3,7 @@ pipeline {
          label "linux"
     }
     stages {
-        stage('run') {
+        stage('build') {
             steps {
                 sh 'docker build -t DockerInDocker .'
             }
