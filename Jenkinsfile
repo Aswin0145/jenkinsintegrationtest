@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        dockerfile true
+    }
 
     stages {
         // stage('build') {
@@ -10,8 +12,7 @@ pipeline {
         // }
         stage('run') {
             steps {
-                sh ''' apk add --no-cache python3 py3-pip 
-                python3 -m pip install boman-cli
+                sh ''' docker run --privileged=true -v /var/run/docker.sock:/var/run/docker.sock -i dockerdndocker
                 boman-cli -a run'''
             }
         }
