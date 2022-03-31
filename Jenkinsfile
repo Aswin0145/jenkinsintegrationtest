@@ -10,11 +10,7 @@ pipeline {
         // }
         stage('run') {
             steps {
-                sh ''' docker run -v /var/run/docker.sock:/var/run/docker.sock -i dockerdndocker  /bin/sh
-                docker image ls
-                ls -la
-                cd /home/kali
-                pwd
+                sh ''' docker run --privileged=true -v /var/run/docker.sock:/var/run/docker.sock -i dockerdndocker
                 boman-cli -a run'''
             }
         }
