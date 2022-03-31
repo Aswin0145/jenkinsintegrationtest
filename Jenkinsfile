@@ -10,7 +10,7 @@ pipeline {
         // }
         stage('run') {
             steps {
-                sh ''' docker run --privileged=true -v /var/run/docker.sock:/var/run/docker.sock -i dockerdndocker
+                sh ''' python3 -m pip install boman-cli
                 boman-cli -a run'''
             }
         }
