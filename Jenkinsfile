@@ -11,7 +11,7 @@ pipeline {
         stage('run') {
             steps {
                 sh ''' docker run -v /var/run/docker.sock:/var/run/docker.sock -i dockerdndocker
-                docker ps
+                docker image ls
                 boman-cli -a run'''
             }
         }
