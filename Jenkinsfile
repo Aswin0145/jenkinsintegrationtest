@@ -1,11 +1,16 @@
 pipeline {
     agent {
-         dockerfile true
+         label linux
     }
     stages {
-        stage('Test') {
+        stage('run') {
             steps {
-                sh ''' docker run -v /var/run/docker.sock:/var/run/docker.sock -it docker /bin/sh 
+                sh 'docker build -t DockerInDocker .'
+            }
+        }
+        stage('run') {
+            steps {
+                sh ''' docker run -v /var/run/docker.sock:/var/run/docker.sock -it DockerInDocker /bin/sh 
                 docker ps
                 boman-cli -a run'''
             }
