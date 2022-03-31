@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh ''' docker run -v /var/run/docker.sock:/var/run/docker.sock -i dockerdndocker
                 docker image ls
-                pwd
+                ls -la
                 boman-cli -a run'''
             }
         }
