@@ -11,8 +11,8 @@ pipeline {
         stage('run') {
             steps {
                 sh ''' 
-                python3 -m pip install boman-cli
-                boman-cli -a run'''
+                pip3 install --upgrade boman-cli
+                ~/.local/bin/boman-cli -a run'''
             }
         }
     }

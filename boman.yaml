@@ -1,0 +1,30 @@
+Auth:
+  project_token: "62d86c99-0107-46ec-8d8d-fc25205d76f3"
+  customer_token:  "389e4d4a-ece0-4c1c-be13-384b1434c0f6"
+
+
+
+SAST:
+  language: "python" ## supported languages python(.py),nodejs(.js),java(.jar,.zip,.class),php(.php),ruby(.rb)
+  #work_dir: "/home/boxuser/box/railsgoat/" ## default is present working directory , mention full path incase of defining
+
+
+
+#SCA:
+ # language: "python"
+  #work_dir: /  ## default is present working directory , mention full path incase of defining eg: home/user/path/to/project
+
+
+
+DAST:
+  type: "Webapp" ## API, WebApp 
+  URL: "http://demo.testfire.net" 
+
+ 
+#   cred: "true"  ## make it true when providing credentials for DASt scan Default:false
+#   username: "something"
+#   password: "something"  
+
+
+Secret_Scan: True  ## if customer doesnt want secret scanning, they can disable it. Default value is true
+
