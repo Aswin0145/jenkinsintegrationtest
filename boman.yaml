@@ -28,3 +28,4 @@ DAST:
 
 Secret_Scan: True  ## if customer doesnt want secret scanning, they can disable it. Default value is true
 
+
