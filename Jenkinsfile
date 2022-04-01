@@ -10,7 +10,9 @@ pipeline {
         // }
         stage('run') {
             steps {
-                sh ''' docker run -i dockerdndocker
+                sh ''' 
+                apt python3 py3-pip
+                python3 -m pip install boman-cli
                 boman-cli -a run'''
             }
         }
