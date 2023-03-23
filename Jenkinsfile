@@ -1,6 +1,10 @@
-node {
-    stage('run') {
-        sh '''pip3 install boman-cli
-              ~/.local/bin/boman-cli -a run'''
+pipeline {
+    agent { dockerfile true}
+    stages {
+        stage('Test') {
+            steps {
+                sh 'boman-cli -a run'
+            }
+        }
     }
 }
