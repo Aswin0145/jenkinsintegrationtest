@@ -2,7 +2,6 @@ pipeline {
     agent { 
         docker{
             image 'i4mmaddy/ubuntu'
-            args '-u 1000:1000'        
     }}
     stages {
         stage('Test') {
