@@ -5,7 +5,7 @@ Auth:
 SAST:
   language: "python"
 SCA:
-  language: "nodejs"
+  language: "python"
 DAST:
   type: "WEB" ## API, WEB, WEB-ADV
   URL:  "http://reddyprasade.github.io/" 
